@@ -16,10 +16,9 @@ import com.google.pages.GoogleSearchPage;
 
 import config.DriverConfig;
 
-@Listeners(listeners.TestNGListener.class)
 public class GoogleSearchTest extends DriverConfig {
-	public WebDriver driver;
-	private Logger log = LogManager.getLogger(this.getClass());
+/*	public WebDriver driver;
+	private Logger log = LogManager.getLogger(this.getClass());*/
 
 	/**
 	 * initializes driver
