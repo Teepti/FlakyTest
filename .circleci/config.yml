@@ -1,7 +1,8 @@
 version: '2.1'
-  orbs:
-    maven: circleci/maven@x.y
-  workflows:
-    maven_test:
-      jobs:
-        - maven/test
+orbs:
+  maven: circleci/maven@x.y
+workflows:
+  maven_test:
+    jobs:
+      - maven/test:
+          command: '-X verify'
