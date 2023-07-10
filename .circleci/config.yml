@@ -1,15 +1,11 @@
 version: '2.1'
 orbs:
   maven: circleci/maven@1.4.1
-steps:
-  - run:
-  #...
-  # run tests and store XML files to a subdirectory, for example, test-results
-  #...
-  - store_test_results:
-    path: test-results
 workflows:
   maven_test:
     jobs:
       - maven/test:
           command: 'test'
+      # Upload test results
+      - store_test_results:
+          path: /tmp/test-reports
